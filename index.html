@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Macy Dofash, Exam 2 Problem</title>
+    <link rel="stylesheet" type="text/css" href="styles/exam2problem.css" />
+      <script src="js/exam2problem.js"></script>
+</head>
+
+        
+<body>
+
+<select onchange="menuchoice()" id="menu">
+        <option>Select</option>
+        <option>Categories</option>
+        <option>Create Category</option>
+        <option>Update Category</option>
+        <option>Delete Category</option>
+        <option>About</option>
+        </select>
+        
+    </select>
+<section id="section1" class="section1">
+<button onclick="getlist()" id="listbutton">View Categories</button><br>
+<table id="listdisplay">Categories Will Display Here</table></section>
+</section>
+
+<section id="section2" class="section2">
+    <label>Category Name</label><br>
+    <input id="catname"><br>
+    <label>Category Description</label><br>
+    <input id="catdescription"><br>
+    <button onclick="createcat()">Create Category</button><br>
+    <label id="res">The Operation's Result Will Display Here</label>
+    
+</section>
+
+<section id="section3" class="section3">
+    <label>Category ID</label><br>
+ <input id="cid"><br>
+ <label>Category Description</label><br>
+ <input id="catdescript"><br>
+ <button onclick="updatecategory()" id="updatebutton">Update Category</button>
+ <label id="res2">The Operation's Result Will Display Here</label>
+ 
+</section>
+ 
+<section id="section4" class="section4">
+    <input id="catid">
+    <button onclick="deletecat()" id="del">Delete</button><br>
+    <label id="res3">The Operation's Result Will Display Here</label>
+
+</section>
+
+<section id="section5" class="section5">
+    <center>
+    <h1> About Macy Dofash!</h1>
+    I'm a senior Information Systems Major at UAB.<br>
+    In my free time I do art.<br> I sell & post art from <a href="https://www.facebook.com/MacyDofashArt/">here!</a><br>
+    </center>
+</section>
+
+
+
+</body>
+</html>
