@@ -29,7 +29,7 @@ function GenerateOutput(result)
   table += "<tr>";
 table += "<td>"+ result.GetAllCategoriesResult[count].CID +"</td>";
 table += "<td>"+ result.GetAllCategoriesResult[count].CName +"</td>";
-table += "<td>"+ result.GetAllCategoriesResult[count].CDescrption +"</td>";
+table += "<td>"+ result.GetAllCategoriesResult[count].CDescription +"</td>";
 table += "</tr>";
 }
 document.getElementById("listdisplay").innerHTML=table;
@@ -45,18 +45,18 @@ function createcat() //section 2
    objRequest.onreadystatechange = function()
    {
     if (objRequest.readyState == 4 && objRequest.status == 200)
-    {             var result = JSON.parse(objRequest.responseText);
-    OperationResult(result);
+    {             var result1 = JSON.parse(objRequest.responseText);
+    OperationResult1(result1);
     }}; 
     objRequest.open("POST", url, true);
     objRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     objRequest.send(newcat);
     }
-    function OperationResult(output)
+    function OperationResult1(output)
     {
     if (output.WasSuccessful == 1)
-    { document.getElementById("res").innerHTML = "The operation was successful!" + "<br>" + output.Exception;}
-    else
+    { document.getElementById("res").innerHTML = "The operation was successful!" + "<br>";}
+    else 
     { document.getElementById("res").innerHTML = "The operation was not successful!" + "<br>" + output.Exception;}
 
     }
@@ -79,16 +79,16 @@ function updatecategory() //section 3
     objRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     objRequest.send(newcat);
     }
-    function OperationResult(output)
+    function OperationResult(output2)
     {
-    if (output.WasSuccessful == 1)
-    { document.getElementById("res2").innerHTML = "The operation was successful!" + "<br>" + output.Exception;}
-    else if (output.WasSuccessful ==0)
-    { document.getElementById("res2").innerHTML = "Operation failed with an unspecified error" + "<br>" + output.Exception;}
-    else if (output.WasSuccessful ==-2)
-    { document.getElementById("res2").innerHTML = "Operation failed because the data string supplied could not be deserialized into the service object!" + "<br>" + output.Exception;}
-    else (output.WasSuccessful ==-3)
-    { document.getElementById("res2").innerHTML = "Operation failed because a record with the supplied order ID could not be found!" + "<br>" + output.Exception;}
+    if (output2.WasSuccessful == 1)
+    { document.getElementById("res2").innerHTML = "The operation was successful!" + "<br>" + output2.Exception;}
+    else if (output2.WasSuccessful ==0)
+    { document.getElementById("res2").innerHTML = "Operation failed with an unspecified error" + "<br>" + output2.Exception;}
+    else if (output2.WasSuccessful ==-2)
+    { document.getElementById("res2").innerHTML = "Operation failed because the data string supplied could not be deserialized into the service object!" + "<br>" + output2.Exception;}
+    else if (output2.WasSuccessful ==-3)
+    { document.getElementById("res2").innerHTML = "Operation failed because a record with the supplied order ID could not be found!" + "<br>" + output2.Exception;}
 
     }
 
@@ -171,7 +171,7 @@ document.getElementById("section1").style.display="none";
 document.getElementById("section4").style.display="block";
 document.getElementById("section5").style.display="none";
 }
-else if (document.getElementById("menu").value=="About")
+else if (document.getElementById("menu").value=="About Me")
 {
 
 document.getElementById("section3").style.display="none";
