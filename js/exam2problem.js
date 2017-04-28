@@ -68,7 +68,7 @@ function updatecategory() //section 3
   var url = "https://student.business.uab.edu/jsonwebservice/service1.svc/updateCatDescription";
    var cid = document.getElementById("cid").value;
    var catdescript2 = document.getElementById("catdescript").value;
-   var newcat = '{"CID":"' + cid + '","CDescription":"' + catdescript2 +'"}';
+   var newcat = '{"CID": '+ cid +',"CDescription":"'+ catdescript2 +'"}';
    objRequest.onreadystatechange = function()
    {
     if (objRequest.readyState == 4 && objRequest.status == 200)
